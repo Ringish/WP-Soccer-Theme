@@ -10,13 +10,12 @@
 </head>
 <body class="<?php body_class(); ?>">
 	<header class="header">
-		<a href="<?php site_url(); ?>">
+		<div class="container">
 			<?php
 			the_custom_logo();
 			?>
-		</a>
-		<nav class="navigation">
-			<?php
+			<nav class="navigation">
+				<?php
 		   /**
 			* Displays a navigation menu
 			* @param array $args Arguments
@@ -28,4 +27,6 @@
 			wp_nav_menu( $args );
 			?>
 		</nav>
-	</header>
+	</div>
+</header>
+<div class="header-pusher"></div>

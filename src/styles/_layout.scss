@@ -1,0 +1,17 @@
+body {
+	margin:0;
+}
+* {
+	box-sizing:border-box;
+}
+
+.container {
+	width:1400px;
+	max-width:100%;
+	padding:10px;
+	&:after {
+		display: block;
+		content:'';
+		clear: both;
+	}
+}

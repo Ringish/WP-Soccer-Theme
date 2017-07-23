@@ -2,6 +2,7 @@
 body {
 	margin:0;
 	font-family: 'Roboto', sans-serif;
+	color:$black;
 }
 * {
 	box-sizing:border-box;
@@ -13,10 +14,41 @@ body {
 	padding:10px 20px;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
 	&:after {
 		display: block;
 		content:'';
 		clear: both;
+	}
+}
+
+// Typo
+a {
+	text-decoration:none;
+}
+p {
+	width:100%;
+}
+h1 {
+	font-size: $h1-font-size;
+	font-weight: 900;
+	color: $black;
+	line-height: $h1-font-size;
+	margin: 0 0 30px;
+	padding: 0;
+	letter-spacing: -2px;
+}
+
+// Buttons
+.btn {
+	display:inline-block;
+	background:$primary-accent;
+	color:$black;
+	text-transform:uppercase;
+	padding:10px;
+	font-size:12px;
+	letter-spacing:1px;
+	transition:.2s;
+	&:hover {
+		opacity: .8;
 	}
 }

@@ -28,6 +28,10 @@ function get_top_content() {
 	$content['content'] = str_replace(']]>', ']]&gt;', $content['content']);
 	$content['title'] = $post->post_title;
 	$content['img'] = get_the_post_thumbnail_url($id);
+	$content['posts_heading'] = get_theme_mod('posts_heading');
+	$content['post_type'] = get_theme_mod('posts_post_type');
+	$content['num_posts'] = get_theme_mod('posts_number')+1;
+	$content['custom_meta'] = get_theme_mod('custom_meta');
 	return $content;
 
 }

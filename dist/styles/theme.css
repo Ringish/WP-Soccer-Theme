@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i);
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
 
 * {
   box-sizing: border-box; }
@@ -7,7 +9,14 @@ body {
 .container {
   width: 1400px;
   max-width: 100%;
-  padding: 10px; }
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
   .container:after {
     display: block;
     content: '';
@@ -18,19 +27,41 @@ body {
   width: 100%;
   background: #232323;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 999;
+  height: 100px; }
+  .header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 100px; }
 
-.custom-logo-link {
-  float: left; }
-
-.custom-logo {
-  max-height: 100px;
-  width: auto; }
+.site-logo {
+  text-decoration: none;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 700;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+  .site-logo img {
+    max-height: 100px;
+    width: auto; }
+  .site-logo .logo-txt-1 {
+    color: #4caf50; }
+  .site-logo .logo-txt-2 {
+    color: #cddc39; }
 
 .navigation {
-  float: right;
-  text-transform: uppercase;
-  margin: 55px 0 0; }
+  text-transform: uppercase; }
   .navigation ul {
     list-style: none;
     margin: 0; }
@@ -43,9 +74,35 @@ body {
         padding: 15px; }
 
 .header-pusher {
-  height: 70px; }
+  height: 100px; }
+  .admin-bar .header-pusher {
+    margin-top: -32px; }
 
 .top-content {
   background-repeat: no-repeat;
   background-size: cover;
-  height: 55vw; }
+  background-position: bottom;
+  height: 45vw;
+  color: #FFF;
+  padding-top: 18vh; }
+  .top-content .intro {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 50px 0 0 90px; }
+    .top-content .intro h1 {
+      font-size: 75px;
+      font-weight: bold;
+      line-height: 85px;
+      margin: 0;
+      padding: 0;
+      letter-spacing: -2px; }
+    .top-content .intro p {
+      font-size: 18px;
+      line-height: 28px;
+      width: 520px;
+      max-width: 100%;
+      font-weight: 300; }
+  .top-content .posts-sidebar {
+    width: 30%;
+    margin-top: 90px; }

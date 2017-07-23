@@ -6,8 +6,13 @@ get_header();
 $top_content = get_top_content();
 ?>
 	<section class="top-content" style="background-image:url('<?php echo $top_content['img']; ?>');">
+	<div class="container">
+	<div class="intro">
 	<h1><?php echo $top_content['title']; ?></h1>
 	<p><?php echo $top_content['content']; ?></p>
+	</div>
+	<aside class="posts-sidebar"><?php echo __('Latest ','soccer-theme'); ?></aside>
+	</div>
 	</section>
 <?php
 while (have_posts()) {

@@ -1,5 +1,31 @@
 .top-content {
-background-repeat: no-repeat;
-background-size: cover;
-height: 55vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:bottom;
+	height: 45vw;
+	color:$white;
+	padding-top:18vh;
+	.intro {
+		flex:1;
+		padding:50px 0 0 90px;
+		h1 {
+			font-size: 75px;
+			font-weight: bold;
+			line-height: 85px;
+			margin: 0;
+			padding: 0;
+			letter-spacing: -2px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 28px;
+			width:520px;
+			max-width: 100%;
+			font-weight: 300;
+		}
+	}
+	.posts-sidebar {
+		width:30%;
+		margin-top:90px;
+	}
 }

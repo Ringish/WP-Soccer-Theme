@@ -24,6 +24,8 @@ function get_top_content() {
 	$post = get_post($id);
 	$content['id'] = $id;
 	$content['content'] = $post->post_content;
+	$content['content'] = apply_filters('the_content', $content['content']);
+	$content['content'] = str_replace(']]>', ']]&gt;', $content['content']);
 	$content['title'] = $post->post_title;
 	$content['img'] = get_the_post_thumbnail_url($id);
 	return $content;

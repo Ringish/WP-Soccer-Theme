@@ -5,6 +5,9 @@ add_theme_support( 'custom-logo' );
 // Featured image
 add_theme_support( 'post-thumbnails' ); 
 
+// Quotes
+add_theme_support( 'post-formats', array( 'quote' ) );
+
 // Customizer
 require get_template_directory() . '/inc/customizer.php';
 

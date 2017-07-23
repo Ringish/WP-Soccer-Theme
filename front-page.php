@@ -32,27 +32,47 @@ $top_content = get_top_content();
 						?>
 						<time><?php echo get_post_meta( get_the_id(), $top_content['custom_meta'], true ); ?></time>
 						<a href="<?php the_permalink(); ?>" class="btn"><?php echo __('Read more','soccer-theme'); ?></a>
-							<?php
-						}
+						<?php
 					}
 				}
+			}
 
-				wp_reset_query();
-				?>
+			wp_reset_query();
+			?>
 
-			</aside>
-		</div>
-	</section>
-	<main class="container" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_id()); ?>)">
-	<div class="intro-content">
-	<?php
-	while (have_posts()) {
-		the_post();
-		the_content();
-	}
-	?>
+		</aside>
 	</div>
-	</main>
+</section>
+<main class="container" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_id()); ?>)">
+	<div class="intro-content">
+		<?php
+		while (have_posts()) {
+			the_post();
+			the_content();
+		}
+		?>
+	</div>
+</main>
+<section class="testimonials container">
 	<?php
-	get_footer();
+	$args = array(
+		'format'   => 'quote',
+		'posts_per_page' => 3,	
+		);
+
+	$query = new WP_Query( $args );
+
+	if ($query->have_posts()) {
+		while($query->have_posts()) {
+			$query->the_post();
+			?>
+			<blockquote class="quote"><?php the_content(); ?></blockquote>
+			<?php
+		}
+	}
+	wp_reset_query();
 	?>
+</section>
+<?php
+get_footer();
+?>

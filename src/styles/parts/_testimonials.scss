@@ -1,0 +1,32 @@
+.testimonials {
+	background: url(../images/testimonials.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 75vh;
+	background-position: center;
+	justify-content: space-around;
+	align-items:center;
+	.quote {
+		flex:1;
+		color:$white;
+		position:relative;
+		padding:25px;
+		text-align: center;
+		font-size:18px;
+		line-height: 28px;
+		letter-spacing: 1px;
+		strong {
+			color:$secondary-accent;
+			font-style: italic;
+		}
+		&:before {
+			content:'"';
+			position:absolute;
+			color:$secondary-accent;
+			font-size:84px;
+			top:0;
+			left:0;
+			font-style:italic;
+		}
+	}
+}

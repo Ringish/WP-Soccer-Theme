@@ -2,7 +2,8 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  color: #232323; }
+  color: #232323;
+  font-weight: 300; }
 
 * {
   box-sizing: border-box; }
@@ -55,7 +56,12 @@ h1 {
   top: 0;
   left: 0;
   z-index: 999;
-  height: 100px; }
+  height: 100px;
+  transition: .4s; }
+  .header.scrolled {
+    background: #4caf50; }
+    .header.scrolled .site-logo .logo-txt-1 {
+      color: #FFF; }
   .header .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -112,7 +118,9 @@ h1 {
   color: #FFF;
   padding-top: 18vh;
   z-index: 1;
-  position: relative; }
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden; }
   .top-content .container {
     width: 100%;
     padding: 0; }
@@ -127,7 +135,8 @@ h1 {
       line-height: 85px;
       margin: 0;
       padding: 0;
-      letter-spacing: -2px; }
+      letter-spacing: -2px;
+      color: #FFF; }
     .top-content .intro p {
       font-size: 18px;
       line-height: 28px;
@@ -178,3 +187,37 @@ main.container {
   background-color: #e6e7e8; }
   main.container .intro-content {
     max-width: 60%; }
+
+.testimonials {
+  background: url(../images/testimonials.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 75vh;
+  background-position: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .testimonials .quote {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    color: #FFF;
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px; }
+    .testimonials .quote strong {
+      color: #cddc39;
+      font-style: italic; }
+    .testimonials .quote:before {
+      content: '"';
+      position: absolute;
+      color: #cddc39;
+      font-size: 84px;
+      top: 0;
+      left: 0;
+      font-style: italic; }

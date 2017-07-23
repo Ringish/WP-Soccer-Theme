@@ -6,6 +6,15 @@
 	left:0;
 	z-index:999;
 	height:100px;
+	transition:.4s;
+	&.scrolled {
+		background:$primary-accent;
+		.site-logo {
+			.logo-txt-1 {
+				color:$white;
+			}
+		}
+	}
 	.container {
 		display: flex;
 		flex-flow: row wrap;
